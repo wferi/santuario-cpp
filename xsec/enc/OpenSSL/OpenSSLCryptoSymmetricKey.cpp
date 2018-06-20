@@ -53,12 +53,12 @@ m_keyType(type),
 m_keyMode(MODE_NONE),
 m_keyBuf(""),
 m_tagBuf(""),
-m_keyLen(0),
 #if (OPENSSL_VERSION_NUMBER < 0x10100000L)
 mp_ctx(&m_ctx_space),
 #else
 mp_ctx(EVP_CIPHER_CTX_new()),
 #endif
+m_keyLen(0),
 m_initialised(false),
 m_blockSize(0),
 m_ivSize(0),
